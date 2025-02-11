@@ -1,0 +1,119 @@
+
+/*logo CSS*/
+.logo-container {
+    position: absolute; /* Positioned relative to the document */
+    top: 1vmax; /* Positioned from the top of the page */
+    left: 2vmax; /* Positioned from the left of the page */
+    text-align: left; /* Align logo text to the left */
+  }
+
+  /* QuantG Letters */
+  .quantg {
+    display: flex;
+    justify-content: center;
+    gap: 0.8vmax;
+    transform: translateY(2.5vmax);
+    animation: move-in 3s ease-out forwards, wave 6s 3s ease-in-out infinite;
+  }
+
+  .quantg span {
+      font-family: 'Press Start 2P', cursive;
+    font-size: 2.4vmax;
+    color: transparent;
+    -webkit-text-stroke: 0.1vmax #ff3333; /* Red stroke */
+    text-shadow: 0 0 0.5vmax #ff3333, 0 0 1vmax #ff3333, 0 0 2vmax #ff3333; /* Red glowing effect */
+    animation: letter-spin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  }
+
+  .quantg span.q {
+    animation-delay: 0s;
+  }
+
+  .quantg span.u {
+    animation-delay: 0.3s;
+  }
+
+  .quantg span.a {
+    animation-delay: 0.6s;
+  }
+
+  .quantg span.n {
+    animation-delay: 0.9s;
+  }
+
+  .quantg span.t {
+    animation-delay: 1.2s;
+  }
+
+  .quantg span.g {
+    animation-delay: 1.5s;
+  }
+
+  /* Motto Styling */
+  .motto {
+      font-family: 'Press Start 2P', cursive;
+    font-size: 0.96vmax;
+    color: #ff3333; /* Red color for motto */
+    opacity: 0;
+    animation: fade-in 2s ease-out 3s forwards, rotate-oscillate 10s linear infinite;
+    margin-top: 0px; /* Space between QuantG and the motto */
+    display: flex;
+    justify-content: center; /* Centering the motto */
+    text-decoration: underline;
+  }
+
+  /* Animations */
+  @keyframes letter-spin {
+    0% {
+      transform: rotateX(90deg) scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      transform: rotateX(0deg) scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes move-in {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Rotating Oscillation for BEYOND GAMING */
+  @keyframes rotate-oscillate {
+    0%, 100% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg); /* Minimal rotation */
+    }
+  }

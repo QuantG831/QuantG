@@ -1,0 +1,68 @@
+
+/*navigation bar styles*/
+.navigation-bar {
+    display: flex;
+    justify-content: flex-end; /* Aligns the entire navigation bar to the right */
+    margin: 1.5% 2% 0% 0%; /* Adds a margin for spacing */
+    font-family: "Rajdhani", cursive;
+}
+
+.navi-text {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vmax;
+    height: 2.8vmax;
+    border-radius: 1vmax;
+    padding: 1% 0.5%;
+    background: rgba(31, 31, 31, 0.8);
+    color: white;
+    font-size: clamp(1rem, 1vw, 3rem);
+    box-shadow: 0.01vmax 0.2vmax 0.9vmax rgba(0, 0, 0, 0.6);
+}
+
+a.items-nav {
+    position: relative;
+    margin-left: 3%;
+    margin-right: 2%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1vmax;
+    z-index: 1;
+}
+
+#navigator {
+    position: absolute;
+    border-radius: 1vmax;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: 80%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    transition: left 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect for navigation items */
+.navi-text a:nth-child(1):hover ~ #navigator {
+    left: 0;
+}
+
+.navi-text a:nth-child(2):hover ~ #navigator {
+    left: 17.3%;
+}
+
+.navi-text a:nth-child(3):hover ~ #navigator {
+    left: 37%;
+    width: 25%;
+}
+
+.navi-text a:nth-child(4):hover ~ #navigator {
+    left: 61.9%;
+}
+
+.navi-text a:nth-child(5):hover ~ #navigator {
+    left: 80%;
+}
+

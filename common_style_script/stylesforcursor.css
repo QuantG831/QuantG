@@ -1,0 +1,32 @@
+  
+html {
+    cursor: url('../images/pointer\ \(1\)\ \(1\).png'), auto; /* Change 'cursor.png' to your image path */
+   
+}
+cursor{
+  height: 40px;
+  width: 40px;
+}
+
+  .spark {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: orange;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 1;
+            box-shadow: 0 0 5px rgba(255, 69, 0, 0.9), 0 0 15px rgba(255, 0, 0, 0.8);
+            animation: sparkMove 0.5s linear forwards;
+        }
+
+        @keyframes sparkMove {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--x-move), var(--y-move)) scale(0);
+                opacity: 0;
+            }
+        }

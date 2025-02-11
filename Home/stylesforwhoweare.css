@@ -1,0 +1,110 @@
+.uuss {
+    margin-left: 10vmax;
+    margin-right: 10vmax;
+    margin-top: 5vmax;
+    transition: all 0.5s ease;
+}
+
+.uuss:hover {
+    transform: scale(1.01);
+    transition: all 0.5s ease;
+
+
+}
+
+
+.sect {
+    padding: 3rem 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 99, 71, 0.1);
+    backdrop-filter: blur(1vmax);
+    border: 2px solid rgba(255, 99, 71, 0.7);
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.7);
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-content {
+    flex: 1;
+    color: white;
+}
+
+.title-container {
+    position: relative;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+}
+
+.rotated-title {
+    position: absolute;
+    left: -4rem;
+    top: 50%;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left center;
+}
+
+.rotated-title h2 {
+    font-size: 2vmax;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #f39c12;
+    position: relative;
+    left: 65%;
+}
+
+.main-title h3 {
+    font-size: 4vmax;
+    line-height: 1.2;
+    color: #e73600;
+    font-weight: 700;
+}
+
+.main-title p {
+    color: #dcdcdc;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.left-content p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.left-content a {
+    margin-top: 1.5rem;
+    padding: 12px 25px;
+    background-color: #e73600;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.left-content a:hover {
+    background-color: #f39c12;
+}
+
+.right-content {
+    flex: 1;
+    text-align: center;
+}
+
+.right-content img {
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: solid darkred 2px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

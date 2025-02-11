@@ -1,0 +1,48 @@
+
+ /* Footer visibility */
+ .footer {
+    z-index: 0;
+    box-shadow: red 1vmax 1vmax 1vmax 1vmax;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 1vmax 0;
+    text-align: center;
+    position: fixed;
+    bottom: -100px; /* Initially hide the footer off the screen */
+    left: 0;
+    transition: bottom 0.5s ease; /* Smooth transition when the footer moves */
+  }
+  
+  .footer-content {
+    max-width: 60vmax;
+    margin: 0 auto;
+    padding: 0 1vmax;
+  }
+  
+  .footer-content p {
+    margin: 0.5vmax 0;
+    color: #ccc;
+  }
+  
+  .footer-content h5 {
+    margin: 0;
+    font-size: 1.2vmax;
+    color: #e63946;
+  }
+  
+  .footer-content a {
+    color: #e63946;
+    text-decoration: none;
+    margin: 0 0.5vmax;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #888;
+  }
+  

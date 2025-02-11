@@ -1,0 +1,165 @@
+
+/* Custom CSS */
+.signup-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background: rgba(44, 41, 41, 0.7);
+    padding: 1.5vw; /* Reduced padding for a smaller form */
+    border-radius: 10px; /* Slightly smaller border radius */
+    box-shadow: 0 3px 8px rgba(255, 0, 0, 0.3); /* Reduced shadow */
+    width: 80%; /* Reduced width */
+    max-width: 30vw; /* Reduced max-width */
+    backdrop-filter: blur(8px); /* Slightly lighter blur effect */
+    transition: transform 0.3s ease-in-out;
+    top: 5vw; /* Reduced top positioning */
+    left: 37vw; /* Adjusted left for better centering */
+    right: 10vw;
+}
+
+@media (max-width: 60vmax) {
+    .signup-container {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 100%;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5vmax; /* Reduced font-size */
+    color: rgb(65, 0, 0);
+    text-shadow: 0 0 0.1vmax rgba(255, 0, 0, 0.5), 0 0 0.3vmax rgba(255, 0, 0, 0.4);
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+}
+
+p.login {
+    position: relative;
+    top: 1vmax;
+    text-align: center;
+}
+
+#login {
+    color: red;
+    text-shadow: rgb(255, 33, 33) 0vmax 0vmax 0.3vmax;
+}
+
+#login:hover {
+    text-decoration: underline;
+}
+
+label {
+    color: #ccc;
+}
+
+.signup-form {
+    margin-top: 50%;
+    margin-bottom: 50%;
+    background: rgba(31, 31, 31, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 2vmax; /* Reduced padding */
+    border-radius: 0.4vmax;
+    box-shadow: 0 0.2vmax 0.4vmax rgba(0, 0, 0, 0.6);
+    width: 39vmax; /* Increased width */
+}
+
+.signup-group {
+    position: relative;
+    margin-bottom: 1.5vmax; /* Increased margin */
+}
+
+.signup-group input,
+.signup-group textarea {
+            width: 100%;
+            padding: 1vmax 1vmax 1vmax 3vmax; /* Increased padding for icon */
+            border: 1px solid #444;
+            border-radius: 0.4vmax; /* Added border radius */
+            font-size: 1vmax; /* Increased font size */
+            outline: none;
+            background-color: #222;
+            color: #fff; /* Text color transparent */
+            transition: border-color 0.3s, box-shadow 0.3s, color 0.3s, background-color 0.3s;
+        }
+
+        .signup-group input:focus,
+        .signup-group textarea:focus {
+            border-color: #ff4500;
+            box-shadow: 0 0 0.4vmax rgba(255, 69, 0, 0.7);
+            color: #fff; /* Text color white on focus */
+            background-color: rgba(31, 31, 31, 0.8); /* Match parent background color */
+        }
+
+        .signup-group label {
+            position: absolute;
+            left: 3vmax; /* Adjusted for icon */
+            top: 1vmax; /* Increased top margin */
+            font-size: 1vmax; /* Increased font size */
+            color: #aaa;
+            background-color: rgba(31, 31, 31, 0.8); /* Match parent background color */
+            padding: 0 0.2vmax; /* Add padding to cover input background */
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 2; /* Ensure label is in front of input */
+        }
+
+        .signup-group input:focus + label,
+        .signup-group input:not(:placeholder-shown) + label,
+        .signup-group textarea:focus + label,
+        .signup-group textarea:not(:placeholder-shown) + label {
+            top: -0.5vmax;
+            font-size: 1.0vmax; /* Adjusted font size */
+            color: #ff4500;
+            animation: custom-glow 1s infinite alternate;
+        }
+
+        @keyframes custom-glow {
+            0% {
+                text-shadow: 0 0 0.25vmax rgba(255, 69, 0, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 1vmax rgba(255, 69, 0, 1);
+            }
+        }
+
+        .signup-group .signup-icon {
+            position: absolute;
+            left: 1vmax; /* Adjusted left margin */
+            top: 1vmax; /* Increased top margin */
+            font-size: 1.2vmax; /* Increased font size */
+            color: #aaa;
+            transition: all 0.3s ease;
+        }
+
+        .signup-group input:focus ~ .signup-icon,
+        .signup-group textarea:focus ~ .signup-icon {
+            font-size: 1.5vmax; /* Increased font size on focus */
+            color: #ff4500;
+        }
+
+        button {
+            display: block;
+            width: 100%; /* Further decreased width */
+            padding: 0.75vmax; /* Reduced padding */
+            background-color: rgba(31, 31, 31, 0.8); /* Same color as parent */
+            color: #ff4500; /* Red text color */
+            border: 1px solid #ff4500; /* Red border with reduced size */
+            border-radius: 0.4vmax; /* More rounded borders */
+            font-size: 0.9vmax; /* Reduced font size */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            margin: 0 auto; /* Center the button */
+        }
+
+        button:hover {
+            background-color: #ff4500; /* Red background color on hover */
+            color: #ffffff; /* Parent color for text on hover */
+            box-shadow: 0 0.2vmax 0.4vmax rgba(255, 69, 0, 0.6); /* Add shadow on hover */
+            transform: scale(1.02); /* Slightly increase size on hover */
+        }
+
+
+        input[type="checkbox"]:checked {
+          border-style: none;
+          outline: none;
+          accent-color: red;
+        }

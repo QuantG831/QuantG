@@ -1,0 +1,88 @@
+
+ /*Footer visibility */
+ .footer {
+    z-index: -1;
+      box-shadow: red 1vmax 1vmax 1vmax 1vmax;
+      width: 100%;
+      background-color: #1a1a1a;
+      padding: 1vmax 0;
+      text-align: center;
+      position: fixed;
+      bottom: -100px; /* Initially hide the footer off the screen */
+      left: 0;
+      transition: bottom 0.5s ease; /* Smooth transition when the footer moves */
+    }
+    
+    .footer-content {
+      max-width: 60vmax;
+      margin: 0 auto;
+      padding: 0 1vmax;
+    }
+    
+    .footer-content p {
+      margin: 0.5vmax 0;
+      color: #ccc;
+    }
+    
+    .footer-content h5 {
+      margin: 0;
+      font-size: 1.2vmax;
+      color: #e63946;
+    }
+    
+    .footer-content a {
+      color: #e63946;
+      text-decoration: none;
+      margin: 0 0.5vmax;
+    }
+    
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+    
+    .footer-bottom {
+      margin-top: 0px;
+      padding-top: 0px;
+      color: #888;
+    }
+    
+    h1 {
+      position: fixed;
+      color: white;
+      font-size: 3vmax;
+      margin-left: 19vmax;
+      margin-top: 4vmax;
+      font-size: 6vmax;
+      color: red;
+    }
+    
+    .contactinfodiv {
+      position: fixed;
+      display: flex;
+      top: 18vmax;
+      left: 10%;
+      background: rgba(31, 31, 31, 0.4);
+      padding: 3vmax;
+      border-radius: 0.8vmax;
+    }
+    .contact-info {
+      color: red;
+      font-size: 1.5vmax;
+    }
+    .contact-info h2 {
+      margin-bottom: 1.3vmax;
+      font-size: 3vmax;
+    }
+    .contact-info .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1vmax;
+      color: white;
+    }
+    .contact-info .info-item i {
+      margin-right: 1vmax;
+      font-size: 1.5vmax;
+    }
+    .info-item i{
+      color: red;
+    }

@@ -1,0 +1,42 @@
+
+#gameArea {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+   /* background: url('https://wallpaperaccess.com/full/39607.jpg') no-repeat center center/cover;*/
+    border-radius: 1vmax;
+    margin-bottom: 10vmax;
+}
+
+.ship {
+    position: absolute;
+    width: 4vmax; /* Ship size is responsive */
+    height: 4vmax;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-0%);
+    background: url('https://cdn-icons-png.flaticon.com/128/8598/8598585.png') no-repeat center/contain;
+}
+
+.bullet {
+    position: absolute;
+    width: 0.1vmax; /* Bullet width is responsive */
+    height: 1vmax;
+    background: yellow;
+}
+
+.asteroid {
+    position: absolute;
+    width: 3vmax; /* Asteroid size is responsive */
+    height: 3vmax;
+    background: url('https://cdn-icons-png.flaticon.com/128/179/179595.png') no-repeat center/contain;
+}
+
+#score {
+    position: absolute;
+    top: 1vmax;
+    left: 1vmax;
+    color: white;
+    font-size: 2vmax; /* Score font size is responsive */
+    font-family: Arial, sans-serif;
+}

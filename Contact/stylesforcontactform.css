@@ -1,0 +1,118 @@
+
+        /* Custom CSS */
+        .custom-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 0;
+            position: relative;
+            margin-top: 20vmax;
+            left: 20%;
+            right: 0%;
+        }
+        
+
+        .custom-contact-form {
+          margin-top: 50%;
+          margin-bottom: 50%;
+            background: rgba(31, 31, 31, 0.8); /* Semi-transparent background */
+            backdrop-filter: blur(10px); /* Blur effect */
+            padding: 2vmax; /* Reduced padding */
+            border-radius: 0.4vmax;
+            box-shadow: 0 0.2vmax 0.4vmax rgba(0, 0, 0, 0.6);
+            width: 39vmax; /* Increased width */
+        }
+
+        .custom-form-group {
+            position: relative;
+            margin-bottom: 1.5vmax; /* Increased margin */
+        }
+
+        .custom-form-group input,
+        .custom-form-group textarea {
+            width: 100%;
+            padding: 1vmax 1vmax 1vmax 3vmax; /* Increased padding for icon */
+            border: 1px solid #444;
+            border-radius: 0.4vmax; /* Added border radius */
+            font-size: 1vmax; /* Increased font size */
+            outline: none;
+            background-color: #222;
+            color: #fff; /* Text color transparent */
+            transition: border-color 0.3s, box-shadow 0.3s, color 0.3s, background-color 0.3s;
+        }
+
+        .custom-form-group input:focus,
+        .custom-form-group textarea:focus {
+            border-color: #ff4500;
+            box-shadow: 0 0 0.4vmax rgba(255, 69, 0, 0.6);
+            color: #fff; /* Text color white on focus */
+            background-color: rgba(31, 31, 31, 0.8); /* Match parent background color */
+        }
+
+        .custom-form-group label {
+            position: absolute;
+            left: 3vmax; /* Adjusted for icon */
+            top: 1vmax; /* Increased top margin */
+            font-size: 1vmax; /* Increased font size */
+            color: #aaa;
+            background-color: rgba(31, 31, 31, 0.8); /* Match parent background color */
+            padding: 0 0.2vmax; /* Add padding to cover input background */
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 2; /* Ensure label is in front of input */
+        }
+
+        .custom-form-group input:focus + label,
+        .custom-form-group input:not(:placeholder-shown) + label,
+        .custom-form-group textarea:focus + label,
+        .custom-form-group textarea:not(:placeholder-shown) + label {
+            top: -0.5vmax;
+            font-size: 1.0vmax; /* Adjusted font size */
+            color: #ff4500;
+            animation: custom-glow 1s infinite alternate;
+        }
+
+        @keyframes custom-glow {
+            0% {
+                text-shadow: 0 0 0.25vmax rgba(255, 69, 0, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 1vmax rgba(255, 69, 0, 1);
+            }
+        }
+
+        .custom-form-group .custom-icon {
+            position: absolute;
+            left: 1vmax; /* Adjusted left margin */
+            top: 1vmax; /* Increased top margin */
+            font-size: 1.2vmax; /* Increased font size */
+            color: #aaa;
+            transition: all 0.3s ease;
+        }
+
+        .custom-form-group input:focus ~ .custom-icon,
+        .custom-form-group textarea:focus ~ .custom-icon {
+            font-size: 1.5vmax; /* Increased font size on focus */
+            color: #ff4500;
+        }
+
+        .custom-button {
+            display: block;
+            width: 30%; /* Further decreased width */
+            padding: 0.75vmax; /* Reduced padding */
+            background-color: rgba(31, 31, 31, 0.8); /* Same color as parent */
+            color: #ff4500; /* Red text color */
+            border: 1px solid #ff4500; /* Red border with reduced size */
+            border-radius: 0.4vmax; /* More rounded borders */
+            font-size: 0.9vmax; /* Reduced font size */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            margin: 0 auto; /* Center the button */
+        }
+
+        .custom-button:hover {
+            background-color: #ff4500; /* Red background color on hover */
+            color: #ffffff; /* Parent color for text on hover */
+            box-shadow: 0 0.2vmax 0.4vmax rgba(255, 69, 0, 0.6); /* Add shadow on hover */
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }

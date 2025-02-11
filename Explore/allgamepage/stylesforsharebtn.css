@@ -1,0 +1,76 @@
+
+/* General styles for the floating share button and social icons */
+.unique-button {
+    position: fixed;
+    bottom: 2vmax;
+    right: 2vmax;
+    width: 3vmax;
+    height: 3vmax;
+    background-color: #222; /* Same initial color as the rest of the icons */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
+    color: white; /* Icon color */
+}
+
+.unique-button:hover {
+    background-color: #1e90ff; /* Darker shade of sky blue */
+}
+
+.unique-social-icons {
+    z-index: 100;
+    position: fixed;
+    bottom: 6vmax;
+    right: 2vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vmax;
+    opacity: 0;
+    transform: translateX(100px);
+    pointer-events: none;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.unique-social-icons.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.unique-social-icons a {
+    width: 3vmax;
+    height: 3vmax;
+    background-color: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2vmax;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
+}
+
+.unique-social-icons a:hover.facebook {
+    background-color: #3b5998; /* Facebook blue */
+}
+
+.unique-social-icons a:hover.instagram {
+    background-color: #bc2a8d; /* Instagram purple */
+}
+
+.unique-social-icons a:hover.discord {
+    background-color: #5865f2; /* Discord blue */
+}
+
+.unique-social-icons a:hover.github {
+    background-color: #000; /* GitHub pitch black */
+}
+
+

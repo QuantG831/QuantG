@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Join QuantG – Create an Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesforforms.css">
+    <link rel="stylesheet" href="stylesfornavigationbar.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforlogo.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforcursor.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforfooter.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforsharebtn.css">
+
+</head>
+<body>
+  <div class="header-background"></div>
+    <div class="xbody">
+  <div class="logo">
+    <div class="logo-container">
+      <div class="quantg">
+        <span class="q">Q</span>
+        <span class="u">u</span>
+        <span class="a">a</span>
+        <span class="n">n</span>
+        <span class="t">t</span>
+        <span class="g">G</span>
+      </div>
+      <div class="motto">BEYOND GAMING</div>
+    </div>
+  </div>
+    
+    <!--Header-->
+    <header>
+        <div class="navigation-bar">
+            <div class="navi-text">
+                <a href="../Home/index.html" class="items-nav">Home</a>
+                <a href="../Explore/allgamepage/index.html" class="items-nav">Explore</a>
+                <a href="../login/login.html" class="items-nav">Signup/Login</a>
+                <a href="../About/index.html" class="items-nav">About</a>
+                <a href="../Contact/index.html" class="items-nav">Contact</a>
+                <span id="navigator"></span>
+            </div>
+        </div>
+    </header>
+<div class="signup-body">
+    <div class="signup-container">
+      <h1>Signup</h1>
+      
+      <div class="signup-group">
+      <input type="text" id="firstName" name="firstName" placeholder="" required>
+      <label for="firstName">First Name</label>
+      <i class="fas fa-user signup-icon"></i>
+      </div>
+
+      <div class="signup-group">
+      <input type="text" id="lastName" name="lastName" placeholder="" required>
+      <label for="lastName">Last Name</label>
+      <i class="fas fa-user signup-icon"></i>
+      </div>
+
+      <div class="signup-group">
+      <input type="email" id="email" name="email" placeholder="" required>
+      <label for="email">Email</label>
+      <i class="fas fa-envelope signup-icon"></i>
+      </div>
+
+      <button id="sendCode" style="margin-bottom: 1vmax;">Send OTP</button>
+      
+      <div class="signup-group">
+      <input type="text" id="emailCode" name="emailCode" placeholder="" required>
+      <label for="emailCode">Email Confirmation Code</label>
+      <i class="fas fa-key signup-icon"></i>
+      </div>
+
+      <button id="verifyCode" style="display: none; margin-bottom: 1vmax;">Verify OTP</button>
+      
+      <div class="signup-group">
+      <input type="password" id="password" name="password" placeholder="" required>
+      <label for="password">Password</label>
+      <i class="fas fa-lock signup-icon"></i>
+      </div>
+
+      <div class="signup-group">
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="" required>
+      <label for="confirmPassword">Confirm Password</label>
+      <i class="fas fa-lock signup-icon"></i>
+      </div>
+
+      <label for="showAllPasswords" style="position: relative; left: 1vmax;">
+          <input type="checkbox" id="showAllPasswords" onclick="toggleAllPasswords()" > Show all passwords
+      </label>
+      
+      <button id="signup" style="display: none;">Signup</button>
+  
+      <p class="login" style="color:#bbb9b9;">Already have an account? <a href="../Login/login.html" style="color: red" onmouseover="this.style.textDecoration='underline'" onmouseleave="this.style.textDecoration='none'">Login</a></p>
+  </div>
+  </div>
+
+<!-- Share Button and Social Icons -->
+<div class="unique-body">
+    <!-- Fixed Button to Trigger Icons -->
+    <div class="unique-button" id="unique-button">
+        <i class="fas fa-share-alt"></i> <!-- Share icon -->
+    </div>
+    
+    <!-- Social Icons (Initially Hidden) -->
+    <div class="unique-social-icons" id="unique-social-icons">
+        <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://discord.com" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+
+  <!--Footer-->
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        <p>Join our community: USMIA</p>
+        <p>
+            <a href="../Home/index.html">Home</a> | 
+            <a href="../Explore/allgamepage/index.html">Explore</a> | 
+            <a href="../About/index.html">About us</a> | 
+            <a href="../Contact/index.html">Contact us</a>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 QuantG. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script type="module">
+
+//javascript for the form
+// Function to toggle password visibility
+function togglePassword(fieldId, icon) {
+    let passwordField = document.getElementById(fieldId);
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      icon.textContent = "👁️";
+    } else {
+      passwordField.type = "password";
+      icon.textContent = "👁️‍🗨️";
+    }
+  }
+
+  // Function to toggle visibility of both passwords
+  function toggleAllPasswords() {
+    let showPasswords = document.getElementById("showAllPasswords").checked;
+    let passwordField = document.getElementById("password");
+    let confirmPasswordField = document.getElementById("confirmPassword");
+    let passwordIcons = document.querySelectorAll(".toggle-password");
+
+    passwordField.type = showPasswords ? "text" : "password";
+    confirmPasswordField.type = showPasswords ? "text" : "password";
+
+    passwordIcons.forEach(icon => {
+      icon.textContent = showPasswords ? "😳" : "😑";
+    });
+  }
+
+// Send OTP// Send OTP
+document.getElementById("sendCode").addEventListener("click", async function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    try {
+        // Check if email exists
+        let response = await fetch("http://localhost:3000/check-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email })
+        });
+
+        if (!response.ok) throw new Error("Server error while checking email.");
+        let data = await response.json();
+
+        if (data.success) {
+            alert("Email already registered. Please login.");
+            return;
+        }
+
+        // Send OTP
+        response = await fetch("http://localhost:3000/send-otp-signup", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email })
+        });
+
+        console.log("response", response);
+        if (!response.ok) throw new Error("Server error while sending OTP.");
+        data = await response.json();
+
+        if (data.success) {
+            alert("OTP sent to your email!");
+            document.getElementById("verifyCode").style.display = "inline-block"; // Show verify button
+        } else {
+            alert(data.message || "Failed to send OTP.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Error: " + error.message);
+    }
+});
+
+// Verify OTP
+document.getElementById("verifyCode").addEventListener("click", async function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const otp = document.getElementById("emailCode").value.trim();
+
+    if (!otp) {
+        alert("Please enter the OTP.");
+        return;
+    }
+
+    try {
+        let response = await fetch("http://localhost:3000/verify-otp", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, otp })
+        });
+
+        if (!response.ok) throw new Error("Server error while verifying OTP.");
+        let data = await response.json();
+
+        if (data.success) {
+            alert("OTP verified successfully!");
+            document.getElementById("signup").style.display = "inline-block"; // Show signup button
+        } else {
+            alert(data.message || "Invalid OTP.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Error: " + error.message);
+    }
+});
+
+// Signup after OTP verification
+document.getElementById("signup").addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (!firstName || !lastName || !email || !password) {
+        alert("All fields are required.");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+    }
+
+    try {
+        let response = await fetch("http://localhost:3000/signup", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ firstName, lastName, email, password })
+        });
+
+        if (!response.ok) throw new Error("Server error while signing up.");
+        let data = await response.json();
+
+        if (data.success) {
+            alert("Signup successful! Redirecting to login...");
+            window.location.href = "../login/login.html"; // Redirect after signup
+        } else {
+            alert(data.message || "Signup failed.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Error: " + error.message);
+    }
+});
+
+// Email format validation
+function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email.toLowerCase());
+}
+
+</script>
+
+<script src="../common_style_script/scriptforfooter.js"></script>
+<script src="../common_style_script/scriptformouseflare.js"></script>
+<script src="../common_style_script/scriptforsocialicons.js"></script>
+<script src="../common_style_script/scriptforavigationbar.js"></script>
+    
+</body>
+</html>

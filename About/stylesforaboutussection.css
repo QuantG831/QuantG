@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+h1 {
+    text-align: center;
+    margin-top: 10vmax;
+    color: rgb(65, 0, 0);
+    text-shadow: 0 0 0.1vmax rgba(255, 0, 0, 0.5), 0 0 0.3vmax rgba(255, 0, 0, 0.4);
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    font-size: 3.5vmax;
+}
+body{
+    font-family: 'Black Ops One', cursive;
+}
+
+.information {
+    margin: 0 10vmax;
+    padding: 3vmax;
+    border-radius: 1vmax;
+    color: white;
+}
+
+.aboutusdiv {
+    margin-bottom: 5vmax;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(0.2vmax);
+    padding: 3vmax;
+    border-radius: 1vmax;
+}
+
+.information h2 {
+    color: red;
+    font-size: 3vmax;
+    margin-bottom: 2vmax;
+}
+.information p {
+    font-size: 1.3vmax;
+    margin-bottom: 1vmax;
+}
+
+
+#introduction, #goals {
+    margin-bottom: 5vmax;
+  position: relative;
+  right: -11vmax;
+}
+
+#mission {
+    position: relative;
+    right: 11vmax;
+}
+
+
+
+.our-team {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(0.2vmax);
+color: #fff;
+padding: 1.5vmax;
+margin-bottom: 10vmax;
+margin-left: 3vmax;
+margin-right: 3vmax;
+border-radius: 1vmax;
+text-align: center;
+}
+
+.our-team h2 {
+color: red;
+font-size: 3vmax;
+margin-bottom: 1vmax;
+}
+
+.our-team p {
+font-size: 1.3vmax;
+margin-bottom: 1vmax;
+color: #ddd;
+}
+
+.team-members {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.team-members .mem span{
+color: red;
+font-size: 2vmax;
+border-radius: 1vmax;
+font-weight: none;
+text-decoration: underline 0.05vmax;
+margin: 0 2vmax;
+}
+
+.iconz {
+position: relative;
+font-size: 10vmax;
+color: rgba(255, 0, 0, 0.452);
+filter: brightness(0.5);
+
+top: 4vmax;
+}
+
+.zabout{
+display: flex;
+}
+
+#team{
+position: relative;
+top: 1vmax;
+}
+
+.person{
+font-size: 5vmax;
+color: rgba(255, 255, 255, 0.3);
+}
+
+#umar path, #shaheer path, #ibrahim path, #maaz path, #ali path {
+/*fill: #e50914; /* Bright red color */
+fill: black;
+stroke: red;
+stroke-width: 2px;
+filter: drop-shadow(0px 0px 10px rgba(229, 9, 20, 0.7));
+}

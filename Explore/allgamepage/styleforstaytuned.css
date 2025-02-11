@@ -1,0 +1,34 @@
+
+
+.staytuned {
+    position: relative;
+    text-align: center;
+    margin-top: 15vmax;
+    margin-bottom: 15vmax;
+}
+
+.staytuned h2{
+    color:red;
+    font-size:7vmax;
+}
+
+.staytuned p {
+    font-size: 2vmax;
+    position: relative;
+    bottom: 1vmax;
+    color: white;
+}
+
+.staytuned {
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slightly moved down */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animation */
+}
+
+.staytuned.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Return to the original position */
+}
+
+

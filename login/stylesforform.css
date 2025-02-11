@@ -1,0 +1,181 @@
+
+        /* Custom CSS */
+        .custombody {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 45vmax;
+        }
+        
+        .login-container {
+            /*background: rgba(59, 58, 58, 0.6); /* Red glass effect */
+            
+            background: rgba(31, 31, 31, 0.8);
+            backdrop-filter: blur(1.5vmax);
+            border-radius: 1vmax;
+            padding: 2vmax;
+            text-align: center;
+            width: 26vmax;
+            box-shadow: 0 0.3vmax 0.8vmax rgba(0, 0, 0, 0.2);
+            border: 0.1vmax solid rgba(255, 255, 255, 0.3);
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 2vmax;
+            margin-bottom: 0.8vmax;
+        }
+        
+        
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5vmax; /* Reduced font-size */
+            color: rgb(65, 0, 0);
+            text-shadow: 0 0 0.1vmax rgba(255, 0, 0, 0.5), 0 0 0.3vmax rgba(255, 0, 0, 0.4);
+            text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+        }
+        
+        input {
+            width: 100%;
+            padding: 0.8vmax;
+            border: none;
+            border-radius: 0.6vmax;
+            outline: none;
+            margin-bottom: 0.8vmax;
+            font-size: 1vmax;
+        }
+        
+        /* Fix: Align checkbox and label on the same line */
+        
+        #showp {
+            position: relative;
+            bottom: 0.49vmax;
+        }
+        
+        
+        .login {
+            margin-top: 0.8vmax;
+            color: #fff;
+            font-size: 1vmax;
+        }
+        
+        .login a {
+            color: #ff8080;
+            text-decoration: none;
+        }
+        
+        .login a:hover {
+            text-decoration: underline;
+        }
+        /*Style for login*/
+        .login-form {
+                  margin-top: 50%;
+                  margin-bottom: 50%;
+                    background: rgba(31, 31, 31, 0.8); /* Semi-transparent background */
+                    backdrop-filter: blur(10px); /* Blur effect */
+                    padding: 2vmax; /* Reduced padding */
+                    border-radius: 0.4vmax;
+                    box-shadow: 0 0.2vmax 0.4vmax rgba(0, 0, 0, 0.6);
+                    width: 39vmax; /* Increased width */
+                }
+        
+                .login-group {
+                    position: relative;
+                    margin-bottom: 1.5vmax; /* Increased margin */
+                }
+        
+                .login-group input,
+                .login-group textarea {
+                    width: 100%;
+                    padding: 1vmax 1vmax 1vmax 3vmax; /* Increased padding for icon */
+                    border: 1px solid #444;
+                    border-radius: 0.4vmax; /* Added border radius */
+                    font-size: 1vmax; /* Increased font size */
+                    outline: none;
+                    background-color: #222;
+                    color: #fff; /* Text color transparent */
+                    transition: border-color 0.3s, box-shadow 0.3s, color 0.3s, background-color 0.3s;
+                }
+        
+                .login-group input:focus,
+                .login-group textarea:focus {
+                    border-color: #ff4500;
+                    box-shadow: 0 0 0.4vmax rgba(255, 69, 0, 0.7);
+                    color: #fff; /* Text color white on focus */
+                    background-color: rgba(31, 31, 31, 0.8); /* Match parent background color */
+                }
+        
+                .login-group label {
+                    position: absolute;
+                    left: 3vmax; /* Adjusted for icon */
+                    top: 1vmax; /* Increased top margin */
+                    font-size: 1vmax; /* Increased font size */
+                    color: #aaa;
+                    background-color: rgba(31, 31, 31, 0.8); /* Match parent background color */
+                    padding: 0 0.2vmax; /* Add padding to cover input background */
+                    transition: all 0.3s ease;
+                    pointer-events: none;
+                    z-index: 2; /* Ensure label is in front of input */
+                }
+        
+                .login-group input:focus + label,
+                .login-group input:not(:placeholder-shown) + label,
+                .login-group textarea:focus + label,
+                .login-group textarea:not(:placeholder-shown) + label {
+                    top: -0.5vmax;
+                    font-size: 1.0vmax; /* Adjusted font size */
+                    color: #ff4500;
+                    animation: custom-glow 1s infinite alternate;
+                }
+        
+                @keyframes login-glow {
+                    0% {
+                        text-shadow: 0 0 0.25vmax rgba(255, 69, 0, 0.5);
+                    }
+                    100% {
+                        text-shadow: 0 0 1vmax rgba(255, 69, 0, 1);
+                    }
+                }
+        
+                .login-group .login-icon {
+                    position: absolute;
+                    left: 1vmax; /* Adjusted left margin */
+                    top: 1vmax; /* Increased top margin */
+                    font-size: 1.2vmax; /* Increased font size */
+                    color: #aaa;
+                    transition: all 0.3s ease;
+                }
+        
+                .login-group input:focus ~ .login-icon,
+                .login-group textarea:focus ~ .login-icon {
+                    font-size: 1.5vmax; /* Increased font size on focus */
+                    color: #ff4500;
+                }
+        
+                button {
+                    display: block;
+                    width: 100%; /* Further decreased width */
+                    padding: 0.75vmax; /* Reduced padding */
+                    background-color: rgba(31, 31, 31, 0.8); /* Same color as parent */
+                    color: #ff4500; /* Red text color */
+                    border: 1px solid #ff4500; /* Red border with reduced size */
+                    border-radius: 0.4vmax; /* More rounded borders */
+                    font-size: 0.9vmax; /* Reduced font size */
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+                    margin: 0 auto; /* Center the button */
+                }
+        
+                button:hover {
+                    background-color: #ff4500; /* Red background color on hover */
+                    color: #ffffff; /* Parent color for text on hover */
+                    box-shadow: 0 0.2vmax 0.4vmax rgba(255, 69, 0, 0.6); /* Add shadow on hover */
+                    transform: scale(1.02); /* Slightly increase size on hover */
+                }
+        
+                input[type="checkbox"]:checked {
+                  border-style: none;
+                  outline: none;
+                  accent-color: red;
+                }
