@@ -167,7 +167,7 @@ document.getElementById("login").addEventListener("click", function(event) {
             if (userData.email === email) {
                 userFound = true;
                 // Send a request to verify the login credentials on the server
-                fetch("http://localhost:3000/verify-login", {
+                fetch("https://mynodebackend.glitch.me/verify-login", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
