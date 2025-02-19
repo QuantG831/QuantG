@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>QuantG – Discover & Play Games</title>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=KNIGHT_WARRIOR&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleforstaytuned.css">
+    <link rel="stylesheet" href="stylesformovingship.css">
+    <link rel="stylesheet" href="stylesforgamesection.css">
+    <link rel="stylesheet" href="stylesfornavigationbar.css">
+    <link rel="stylesheet" href="../../common_style_script/stylesforlogo.css">
+    <link rel="stylesheet" href="../../common_style_script/stylesforfooter.css">
+    <link rel="stylesheet" href="../../common_style_script/stylesforcursor.css">
+    <link rel="stylesheet" href="../../common_style_script/stylesforsharebtn.css">
+    <link rel="stylesheet" href="../../common_style_script/stylesforhamburger.css">
+
+    <style>
+
+              /* Container for the iframe and button */
+              .iframe-container {
+          position: relative;
+          width: 100%;
+          height: 50vmax;
+      }
+
+      /* Style for the iframe */
+      #game-frame {
+          width: 100%;
+          height: 100%;
+          border: none;
+      }
+
+      /* Style for the fullscreen button */
+      #fullscreen-btn {
+          position: absolute; /* Position relative to the container */
+          bottom: 10px; /* Distance from the bottom */
+          right: 10px; /* Distance from the right */
+          background-color: red;
+          color: white;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          font-size: 16px;
+          border-radius: 5px; /* Optional: Rounded corners */
+          z-index: 10; /* Ensure the button is above the iframe */
+      }
+
+      #fullscreen-btn i {
+          font-style: normal;
+      }
+
+    </style>
+
+
+</head>
+<body>
+<div class="body2">
+  <div class="header-background"></div>
+  
+    <!--Header-->
+    <header>
+        <div class="navigation-bar">
+            <div class="navi-text">
+                <a href="../../Home/index.html" class="items-nav">Home</a>
+                <a href="index.html" class="items-nav">Explore</a>
+                <a href="../../login/login.html" class="items-nav">Signup/Login</a>
+                <a href="../../About/index.html" class="items-nav">About</a>
+                <a href="../../Contact/index.html" class="items-nav">Contact</a>
+                <span id="navigator"></span>
+            </div>
+        </div>
+    </header>
+
+
+    
+<!-- Hamburger Menu Icon -->
+<div class="hamburger-menu" onclick="toggleMenu()">
+  ☰
+</div>
+
+<!-- Sidebar Menu -->
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">✖</a>
+  <a href="../Home/index.html">Home</a>
+  <a href="../Explore/allgamepage/index.html">Explore</a>
+  <a href="../About/index.html">About</a>
+  <a href="../Contact/index.html">Contact</a>
+</div>
+  
+
+    <!-- Share Button and Social Icons -->
+    <div class="unique-body">
+        <!-- Fixed Button to Trigger Icons -->
+        <div class="unique-button" id="unique-button">
+            <i class="fas fa-share-alt"></i> <!-- Share icon -->
+        </div>
+    
+        <!-- Social Icons (Initially Hidden) -->
+        <div class="unique-social-icons" id="unique-social-icons">
+            <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://discord.com" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+            <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+
+    <!--Logo-->
+    <div class="logo">
+        <div class="logo-container">
+            <div class="quantg">
+                <span class="q">Q</span>
+                <span class="u">u</span>
+                <span class="a">a</span>
+                <span class="n">n</span>
+                <span class="t">t</span>
+                <span class="g">G</span>
+            </div>
+            <div class="motto">BEYOND GAMING</div>
+        </div>
+    </div>
+
+<!--Side Box-->
+    <div class="sidebox"></div>
+
+    <!--Hero Section-->
+    <div class="gamez">
+        <h1>EXPLORE AND PLAY EXCITING GAMES</h1>
+        <p>Join the game, level up your experience!</p>
+    </div>
+
+    <div id="game-cards"></div>
+    <div id="game-screen" style="display: none;">
+
+      <div class="iframe-container">
+        <iframe id="game-frame" src=""></iframe>
+        <button id="fullscreen-btn">
+            <i id="icon">⛶</i> <!-- Fullscreen icon -->
+        </button>
+    </div>
+
+      <button id="close-btn">Close</button>
+      <div id="vote-buttons">
+        <button id="thumbsup-btn" class="vote-btn">👍</button>
+        <button id="thumbsdown-btn" class="vote-btn">👎</button>
+      </div>
+    </div>
+    <div id="loading-spinner" style="display: none;">
+      <div class="loadingcircle" style="display: flex;flex-direction: column;align-items: center;">
+
+        <div class="loader">
+          <div class="inner-dot"></div>
+      </div>
+      <br><p style="color: white;">Loading...</p>
+    </div>
+    </div>
+    
+    <!--Stay Tuned-->
+    <div class="staytuned">
+        <h2>Stay Tuned</h2>
+        <p>More Games Coming soon<p>
+    </div>
+
+    <i class="fas fa-joystick" style="text-align: center;"></i>
+
+    
+<div id="gameArea">
+  <div class="spaceship"></div>
+  <div class="flare"></div>
+</div>
+   
+  <!--Footer-->
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        <p>Join our community: USMIA</p>
+        <p>
+            <a href="../../Home/index.html">Home</a> | 
+            <a href="index.html">Explore</a> | 
+            <a href="../../About/index.html">About us</a> | 
+            <a href="../../Contact/index.html">Contact us</a>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 QuantG. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+    <script type="module">
+/*/ Check if the token exists in localStorage and validate it on page load
+document.addEventListener("DOMContentLoaded", function () {
+    const token = localStorage.getItem("authToken");
+
+
+
+    if (!token) {
+        alert("No token found. Please log in.");
+        window.location.href = "../../login/login.html"; // Redirect to login page
+        return;
+    }
+
+    // Send the token to the backend for verification
+    fetch("http://localhost:3000/verify-token", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ token })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Authentication failed. Please log in again.");
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.message === "OK") {
+            console.log("Authentication successful.");
+            // Continue with the page loading or other actions if the token is valid
+        } else {
+            alert("Invalid or expired token. Please log in again.");
+            localStorage.removeItem("authToken"); // Remove the invalid token
+            window.location.href = "../../login/login.html"; // Redirect to login page
+        }
+    })
+    .catch(error => {
+        console.error("Error verifying token:", error);
+        alert("Server error: Unauthorized access... Please try again later.");
+       window.location.href = "../../login/login.html"; // Redirect to login page if verification fails
+    });
+});
+*/
+
+
+//Javascript for the game
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+import { getDatabase, ref, update, get, query, orderByChild } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAfX0_hVnKvtR5CaNdW8U9-PTkaSp2STZ4",
+  authDomain: "usmia-e7166.firebaseapp.com",
+  projectId: "usmia-e7166",
+  storageBucket: "usmia-e7166.firebasestorage.app",
+  messagingSenderId: "70965621460",
+  appId: "1:70965621460:web:e930562f1cc6dacb02c141",
+  measurementId: "G-WZNL3XPVXC"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const gameCardsContainer = document.getElementById("game-cards");
+  const gameScreen = document.getElementById("game-screen");
+  const gameFrame = document.getElementById("game-frame");
+  const closeBtn = document.getElementById("close-btn");
+  const loadingSpinner = document.getElementById("loading-spinner");
+
+  loadingSpinner.style.display = "block";
+
+  const gamesRef = ref(db, 'games');
+  const gamesQuery = query(gamesRef, orderByChild('visits'));
+
+  get(gamesQuery).then((snapshot) => {
+    loadingSpinner.style.display = "none";
+    if (snapshot.exists()) {
+      gameCardsContainer.innerHTML = "";
+      const gamesArray = [];
+      snapshot.forEach((childSnapshot) => {
+        const gameData = childSnapshot.val();
+        gamesArray.push({ ...gameData, key: childSnapshot.key });
+      });
+
+      gamesArray.sort((a, b) => b.visits - a.visits);
+      gamesArray.forEach(game => {
+        const card = createGameCard(game, game.key);
+        gameCardsContainer.appendChild(card);
+      });
+    } else {
+      gameCardsContainer.innerHTML = "<p>No games available.</p>";
+    }
+  }).catch((error) => {
+    loadingSpinner.style.display = "none";
+    console.error("Error fetching game data: ", error);
+    gameCardsContainer.innerHTML = "<p>Error loading games. Please try again later.</p>";
+  });
+
+  function createGameCard(gameData, gameKey) {
+    const card = document.createElement("div");
+    card.classList.add("game-card");
+    card.setAttribute("data-game", gameData.gamePath);
+
+    card.innerHTML = `
+      <img src="${gameData.image}" alt="${gameData.name}">
+      <h3>${gameData.name}</h3>
+      <p class="desk">${gameData.description}</p>
+      <button class="play-btn">Play</button>
+      <div class="votes">
+        <button class="thumbsup-btn"><i class="fa-solid fa-thumbs-up"></i></button>
+        <span class="thumbsup-count">${gameData.thumbsup}</span>
+        <button class="thumbsdown-btn"><i class="fa-solid fa-thumbs-down"></i></button>
+        <span class="thumbsdown-count">${gameData.thumbsdown}</span>
+        <span class="visits-btn"><i class="fa-solid fa-eye"></i></span>
+        <span class="visits-count">${gameData.visits}</span>
+      </div>
+    `;
+
+    const playButton = card.querySelector(".play-btn");
+    playButton.addEventListener("click", () => openGame(gameData, gameKey));
+    return card;
+  }
+
+  function openGame(gameData, gameKey) {
+    // Increment the visits count for the game
+    const gameRef = ref(db, "games/" + gameKey);
+    get(gameRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        const currentVisits = snapshot.val().visits || 0;
+        update(gameRef, { visits: currentVisits + 1 });
+      }
+    }).catch((error) => {
+      console.error("Error updating visits count: ", error);
+    });
+
+    // Rest of the existing code...
+    gameScreen.style.display = "flex";
+    gameFrame.src = gameData.gamePath;
+
+    const thumbsupBtn = document.getElementById("thumbsup-btn");
+    const thumbsdownBtn = document.getElementById("thumbsdown-btn");
+
+    const authToken = localStorage.getItem("authToken");
+    if (!authToken) return;
+
+    const usersRef = ref(db, "users");
+    get(usersRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        snapshot.forEach((childSnapshot) => {
+          const userData = childSnapshot.val();
+          if (userData.token === authToken) {
+            const userVote = userData.votes?.[gameKey];
+            if (userVote === "thumbsup") thumbsupBtn.style.backgroundColor = "green";
+            if (userVote === "thumbsdown") thumbsdownBtn.style.backgroundColor = "red";
+          }
+        });
+      }
+    });
+
+    thumbsupBtn.onclick = () => vote(gameData, gameKey, "thumbsup");
+    thumbsdownBtn.onclick = () => vote(gameData, gameKey, "thumbsdown");
+  }
+
+  function vote(gameData, gameKey, voteType) {
+    const authToken = localStorage.getItem("authToken");
+    if (!authToken) return alert("You must be logged in to vote.");
+
+    const usersRef = ref(db, "users");
+    get(usersRef).then((snapshot) => {
+      if (!snapshot.exists()) return;
+
+      snapshot.forEach((childSnapshot) => {
+        const userData = childSnapshot.val();
+        if (userData.token === authToken) {
+          const userVotes = userData.votes || {};
+          const previousVote = userVotes[gameKey];
+          
+          if (previousVote === voteType) return;
+
+          userVotes[gameKey] = voteType;
+          update(childSnapshot.ref, { votes: userVotes });
+          
+          const gameRef = ref(db, "games/" + gameKey);
+          let newThumbsUp = gameData.thumbsup;
+          let newThumbsDown = gameData.thumbsdown;
+
+          if (previousVote === "thumbsup") newThumbsUp -= 1;
+          if (previousVote === "thumbsdown") newThumbsDown -= 1;
+          if (voteType === "thumbsup") newThumbsUp += 1;
+          if (voteType === "thumbsdown") newThumbsDown += 1;
+
+          update(gameRef, { thumbsup: newThumbsUp, thumbsdown: newThumbsDown });
+
+          document.getElementById("thumbsup-btn").style.backgroundColor = voteType === "thumbsup" ? "green" : "white";
+          document.getElementById("thumbsdown-btn").style.backgroundColor = voteType === "thumbsdown" ? "red" : "white";
+        }
+      });
+    }).catch((error) => console.error("Error fetching user data: ", error));
+  }
+
+  closeBtn.addEventListener("click", () => {
+    gameScreen.style.display = "none";
+    gameFrame.src = "";
+  });
+});
+
+</script>
+
+<script src="scriptforloading.js"></script>
+<script src="scriptforstaytuned.js"></script>
+<script src="scriptforfullscreen.js"></script>
+<script src="scriptformovingspaceship.js"></script>
+<script src="../../common_style_script/scriptforfooter.js"></script>
+<script src="../../common_style_script/scriptforhamburger.js"></script>
+<script src="../../common_style_script/scriptformouseflare.js"></script>
+<script src="../../common_style_script/scriptforavigationbar.js"></script>
+<script src="../../common_style_script/scriptforsocialicons.js" defer></script>
+</body>
+</html>

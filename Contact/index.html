@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Contact QuantG – Get in Touch</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesforcontactinfo.css">
+    <link rel="stylesheet" href="stylesforcontactform.css">
+    <link rel="stylesheet" href="stylesfornavigationbar.css">
+    <link rel="stylesheet" href="mobilefriendly.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforlogo.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforcursor.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforfooter.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforsharebtn.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforhamburger.css">
+
+</head>
+<body>
+  <div class="header-background"></div>
+    
+  <div class="logo">
+    <div class="logo-container">
+      <div class="quantg">
+        <span class="q">Q</span>
+        <span class="u">u</span>
+        <span class="a">a</span>
+        <span class="n">n</span>
+        <span class="t">t</span>
+        <span class="g">G</span>
+      </div>
+      <div class="motto">BEYOND GAMING</div>
+    </div>
+  </div>
+
+  
+<!-- Hamburger Menu Icon -->
+<div class="hamburger-menu" onclick="toggleMenu()">
+  ☰
+</div>
+
+<!-- Sidebar Menu -->
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">✖</a>
+  <a href="../Home/index.html">Home</a>
+  <a href="../Explore/allgamepage/index.html">Explore</a>
+  <a href="../About/index.html">About</a>
+  <a href="../Contact/index.html">Contact</a>
+</div>
+    
+    <!--Header-->
+    <header>
+        <div class="navigation-bar">
+            <div class="navi-text">
+                <a href="../Home/index.html" class="items-nav">Home</a>
+                <a href="../Explore/allgamepage/index.html" class="items-nav">Explore</a>
+                <a href="../login/login.html" class="items-nav">Signup/Login</a>
+                <a href="../About/index.html" class="items-nav">About</a>
+                <a href="index.html" class="items-nav">Contact</a>
+                <span id="navigator"></span>
+            </div>
+        </div>
+    </header>
+<div class="mbl">
+    <h1>Contact Us</h1>
+
+<div class="contactinfodiv">
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>+123 456 7890</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <span>quantg831@gmail.com</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>123 Main Street, City, Country</span>
+      </div>
+    </div>
+</div>
+    
+<!-- Forms -->
+<div class="custom-body">
+  <form class="custom-contact-form" action="https://formspree.io/f/xovjdoba" method="POST">
+      <div class="custom-form-group">
+          <input type="text" id="custom-name" name="custom-name" placeholder=" " required>
+          <label for="custom-name">Name</label>
+          <i class="fas fa-user custom-icon"></i>
+      </div>
+      <div class="custom-form-group">
+          <input type="email" id="custom-email" name="custom-email" placeholder=" " required>
+          <label for="custom-email">Email</label>
+          <i class="fas fa-envelope custom-icon"></i>
+      </div>
+      <div class="custom-form-group">
+          <textarea id="custom-message" name="custom-message" placeholder=" " rows="5" required></textarea>
+          <label for="custom-message">Message</label>
+          <i class="fas fa-comment custom-icon"></i>
+      </div>
+      <button type="submit" class="custom-button">Send Message</button>
+  </form>
+</div>
+</div>
+<!-- Share Button and Social Icons -->
+<div class="unique-body">
+    <!-- Fixed Button to Trigger Icons -->
+    <div class="unique-button" id="unique-button">
+        <i class="fas fa-share-alt"></i> <!-- Share icon -->
+    </div>
+    
+    <!-- Social Icons (Initially Hidden) -->
+    <div class="unique-social-icons" id="unique-social-icons">
+        <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://discord.com" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+
+  <!--Footer-->
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        <p>Join our community: USMIA</p>
+        <p>
+            <a href="../Home/index.html">Home</a> | 
+            <a href="../Explore/allgamepage/index.html">Explore</a> | 
+            <a href="../About/index.html">About us</a> | 
+            <a href="index.html">Contact us</a>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 QuantG. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+<script>
+  
+/*/ Check if the token exists in localStorage and validate it on page load
+document.addEventListener("DOMContentLoaded", function () {
+    const token = localStorage.getItem("authToken");
+
+    if (!token) {
+        alert("No token found. Please log in.");
+        window.location.href = "../../login/login.html"; // Redirect to login page
+        return;
+    }
+
+    // Send the token to the backend for verification
+    fetch("http://localhost:3000/verify-token", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ token })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Authentication failed. Please log in again.");
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.message === "OK") {
+            console.log("Authentication successful.");
+            // Continue with the page loading or other actions if the token is valid
+        } else {
+            alert("Invalid or expired token. Please log in again.");
+            localStorage.removeItem("authToken"); // Remove the invalid token
+            window.location.href = "../login/login.html"; // Redirect to login page
+        }
+    })
+    .catch(error => {
+        console.error("Error verifying token:", error);
+        alert("Server error: Unauthorized access... Please try again later.");
+       window.location.href = "../login/login.html"; // Redirect to login page if verification fails
+    });
+});
+*/
+</script>
+
+<script src="scriptforcontactform.js"></script>
+<script src="../common_style_script/scriptforfooter.js"></script>
+<script src="../common_style_script/scriptforhamburger.js"></script>
+<script src="../common_style_script/scriptformouseflare.js"></script>
+<script src="../common_style_script/scriptforavigationbar.js"></script>
+<script src="../common_style_script/scriptforsocialicons.js" defer></script>
+    
+</body>
+</html>

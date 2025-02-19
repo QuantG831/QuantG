@@ -1,0 +1,56 @@
+
+
+/* Hamburger Icon */
+@media(max-width: 768px){
+.hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 2vmax;
+    right: 2vmax;
+    font-size: 2.5vmax;
+    cursor: pointer;
+    background: rgba(31, 31, 31, 0.8);
+    color: white;
+    padding: 0.5vmax 1vmax;
+    border-radius: 0.5vmax;
+    z-index: 1000;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden */
+    width: 60%;
+    height: 100%;
+    background: #222;
+    transition: right 0.4s ease-in-out;
+    padding-top: 4vmax;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;  /* Ensures it appears above other elements */
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2vmax;
+    padding: 1.5vmax;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #ff3333;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 1vmax;
+    right: 2vmax;
+    font-size: 2.5vmax;
+    cursor: pointer;
+}
+}

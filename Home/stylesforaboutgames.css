@@ -1,0 +1,118 @@
+
+.about-games {
+    margin:10vmax 17vmax 5vmax 14vmax;
+width: 70vmax;
+height: 50vmax;
+    background-color:rgba(255, 0, 0, 0.08);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: left;
+border-radius: 1vmax;
+backdrop-filter: blur(1vmax);
+box-shadow: 0 0 15px rgba(255, 99, 71, 0.7); /* Glowing reddish border */
+border: 2px solid rgba(255, 99, 71, 0.7);
+transition: 0.3s ease-in-out;
+padding-left: 4vmax;
+padding-right: 3vmax;
+margin-bottom: 8vmax;
+}
+
+.about-games:hover {
+scale: 1.01;
+}
+
+.about-games h2 {
+margin-bottom: 2vmax;
+font-size: 4vmax;
+color: #ff4d4d; /* Softer red for better visibility */
+text-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.8); /* Glowing effect */
+text-align: center; /* Center the heading */
+}
+
+.about-games ul {
+list-style-type: none;
+padding: 0;
+margin-top: 2vmax;
+text-align: center; /* Center the list */
+margin-left: 2vmax;
+}
+
+.about-games li {
+font-size: 1.5vmax;
+margin-bottom: 2vmax;
+color: #ddd; /* Lighter text for contrast */
+position: relative;
+padding-left: 2vmax;
+text-align: left; /* Left-align the text */
+}
+
+.about-games li::before {
+content: "✔";
+color: #ff4d4d; /* Red for bullets */
+position: absolute;
+left: -1vmax;
+top: 0;
+font-size: 2vmax;
+}
+
+.about-games p {
+font-size: 2vmax;
+text-align: center;
+margin-top: 3vmax;
+color: #ccc; /* Light grey text for contrast */
+text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.9); /* Dark shadow for visibility */
+}
+
+.about-games li:hover {
+color: #ffcc00; /* Highlight text color on hover */
+transition: color 0.3s ease;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .about-games {
+        width: 90%; /* Adjust width for mobile screens */
+        height: auto; /* Allow flexible height */
+        margin: 5vmax auto; /* Center the section */
+        padding: 4vmax 3vmax;
+        border-radius: 2vmax;
+        text-align: center; /* Center content */
+    }
+
+    .about-games h2 {
+        font-size: 5vmax; /* Larger heading for readability */
+        margin-bottom: 3vmax;
+    }
+
+    .about-games ul {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .about-games li {
+        font-size: 2vmax; /* Larger text */
+        padding-left: 0; /* Remove left padding */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1vmax;
+    }
+
+    .about-games li::before {
+        font-size: 3vmax; /* Adjust bullet size */
+        position: static; /* Remove absolute positioning */
+    }
+
+    .about-games p {
+        font-size: 3vmax; /* Larger text */
+        margin-top: 4vmax;
+    }
+
+    .main-title p{
+        font-size: 2.5vmax;
+    }
+}

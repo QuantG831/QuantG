@@ -1,0 +1,68 @@
+
+
+.staytuned {
+    position: relative;
+    text-align: center;
+    margin-top: 15vmax;
+    margin-bottom: 15vmax;
+}
+
+.staytuned h2{
+    color:red;
+    font-size:7vmax;
+}
+
+.staytuned p {
+    font-size: 2vmax;
+    position: relative;
+    bottom: 1vmax;
+    color: white;
+}
+
+.staytuned {
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slightly moved down */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth animation */
+}
+
+.staytuned.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Return to the original position */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .staytuned {
+        margin-top: 10vmax;
+        margin-bottom: 10vmax;
+        padding: 0 5vw;
+    }
+
+    .staytuned h2 {
+        font-size: 10vw; /* Scale heading for smaller screens */
+    }
+
+    .staytuned p {
+        font-size: 4vw;
+        bottom: 0.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .staytuned {
+        margin-top: 8vmax;
+        margin-bottom: 8vmax;
+        padding: 0 3vw;
+    }
+
+    .staytuned h2 {
+        font-size: 12vw;
+    }
+
+    .staytuned p {
+        font-size: 5vw;
+        bottom: 0;
+    }
+}

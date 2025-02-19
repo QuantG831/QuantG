@@ -1,0 +1,116 @@
+
+        /*styles for hero section*/
+        .hero {
+            margin-left: -2px;
+            margin-right: 0vw;
+            width: 101%;
+            height: 85vh;
+            background-image: 
+              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Dark overlay */
+              url(Hero1.png); /* Background image */
+            background-size: cover; /* Ensure the image covers the entire area */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            backdrop-filter: blur(1vmax); /* Glassy effect with blur */
+            border: 2px solid rgba(255, 99, 71, 0.7);
+            transition: 0.3s ease-in-out;
+          }
+  
+          /*.hero:hover {
+            scale: 1.01;
+          }*/
+  
+          .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            /*text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.7); /* Glowing effect */
+            color: rgb(65, 0, 0);
+            text-shadow: 0 0 0.1vmax rgba(255, 0, 0, 0.5), 0 0 0.3vmax rgba(255, 0, 0, 0.4);
+            text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+        }      
+  
+        .hero p {
+          font-size: 1.5rem;
+          margin: 0.5vmax 0 1vmax;
+          color: #e0e0e0; /* Brighter grey text */
+          text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.9); /* Stronger dark glowing effect */
+      }
+      
+  
+          .hero .cta-button {
+              padding: 0.75vmax 1.5vmax;
+              font-size: 0.96vmax;
+              color: #ffffff;
+              background-color: #ff0000;
+              border: none;
+              border-radius: 0.2vmax;
+              cursor: pointer;
+              text-transform: uppercase;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              text-decoration: none;
+              font-weight: bold;
+          }
+  
+          .hero .cta-button:hover {
+              transform: scale(1.1);
+              box-shadow: 0 0.2vmax 0.75vmax rgba(255, 0, 0, 0.6);
+          }
+  
+          @media (max-width: 48.4vmax) {
+              .hero h1 {
+                  font-size: 2.4vmax;
+              }
+  
+              .hero p {
+                  font-size: 0.96vmax;
+              }
+          }
+  
+          h2 {
+            font-size: 3vmax;
+            position: relative;
+            top: 2vmax;
+            color: white;
+          }
+  
+  /* Mobile responsiveness for Hero Section */
+@media (max-width: 768px) {
+  .hero {
+      width: 100%;
+      height: 70vh; /* Reduce height for smaller screens */
+      background-size: cover;
+      background-position: center;
+      padding: 5vmax 2vmax; /* Add padding for spacing */
+      border: none; /* Remove border to prevent clutter */
+  }
+
+  .hero h1 {
+      font-size: 6vmax; /* Larger text for readability */
+      text-shadow: 0 0 3vmax rgba(255, 0, 0, 0.99); /* Slight glow */
+      color: rgb(65, 0, 0);
+      text-shadow: 0 0 0.1vmax rgba(255, 0, 0, 0.5), 0 0 0.3vmax rgba(255, 0, 0, 0.4);
+      text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+  }
+
+  .hero p {
+      font-size: 3vmax; /* Adjust paragraph size */
+      margin: 2vmax 0;
+      line-height: 1.5;
+  }
+
+  .hero .cta-button {
+      font-size: 3vmax; /* Bigger button for tap targets */
+      padding: 2vmax 3vmax;
+      border-radius: 1vmax;
+  }
+
+  h2 {
+      font-size: 4vmax;
+      top: 1vmax;
+  }
+}

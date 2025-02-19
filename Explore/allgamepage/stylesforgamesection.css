@@ -1,0 +1,521 @@
+/* Game Cards Container */
+#game-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the left */
+    margin: 2vmax;
+  }
+  
+  /* Game Card Styles */
+  .game-card {
+    background-color: #2e2e2e; /* Dark background for cards */
+    border: 2px solid #800000; /* Dark red border */
+    border-radius: 1vmax;
+    width: 19vmax;
+    height: 30vmax;
+    margin: 2vmax;
+    padding: 2vmax;
+    box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Glowing Effect on Hover */
+  .game-card:hover {
+    transform: translateY(-1vmax);
+    box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7); /* Glowing red effect */
+  }
+  
+  /* Game Card Image */
+  .game-card img {
+    width: 100%;
+    border-radius: 1vmax;
+    height: 15vmax;
+    object-fit: cover;
+  }
+  
+  /* Game Card Heading */
+  .game-card h3 {
+    font-size: 2vmax; /* Text size in vmax */
+    margin: 1vmax 0;
+    color: #f5f5f5; /* Light text for the heading */
+  }
+  
+  /* Game Description */
+  .game-card .desk {
+    font-size: 1.5vmax; /* Text size in vmax */
+    color: #bbb; /* Lighter color for description */
+    margin-bottom: 1.5vmax;
+  }
+  
+  /* Visits Text */
+  .game-card p {
+    font-size: 1.5vmax; /* Text size in vmax */
+    color: #f5f5f5;
+    margin-bottom: 1vmax;
+  }
+  
+  /* Play Button Styles */
+  .game-card .play-btn {
+    background-color: #800000; /* Dark red button */
+    color: white;
+    border: none;
+    padding: 1.5vmax 3vmax; /* Button size in vmax */
+    border-radius: 1vmax;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 1.5vmax; /* Font size in vmax */
+  }
+  
+  .game-card .play-btn:hover {
+    background-color: #FF0000; /* Pure red on hover */
+    transform: scale(1.1); /* Slight increase in size */
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); /* Glowing effect */
+  }
+  
+  /* Game Screen */
+  #game-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Game Frame */
+  #game-frame {
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 1vmax;
+  }
+  
+  /* Close Button */
+  #close-btn {
+    position: absolute;
+    top: 2vmax;
+    right: 2vmax;
+    background-color: #800000; /* Dark red close button */
+    color: white;
+    border: none;
+    padding: 1.5vmax;
+    border-radius: 50%;
+    font-size: 2vmax; /* Font size in vmax */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  #close-btn:hover {
+    background-color: #FF0000; /* Pure red on hover */
+    transform: scale(1.1); /* Slight increase in size */
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); /* Glowing effect */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Game Cards Container */
+  #game-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Align items to the left */
+    margin: 2vmax;
+  }
+  
+  /* Game Card Styles */
+  .game-card {
+    background-color: #2e2e2e; /* Dark background for cards */
+    border: 2px solid #800000; /* Dark red border */
+    border-radius: 1vmax;
+    width: 26vmax;
+    height: 25vmax;
+    margin: 2vmax;
+    padding: 1vmax;
+    box-shadow: 0 0.5vmax 1vmax rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Glowing Effect on Hover */
+  .game-card:hover {
+    transform: translateY(-1vmax);
+    box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7); /* Glowing red effect */
+  }
+  
+  /* Game Card Image */
+  .game-card img {
+    width: 100%;
+    border-radius: 1vmax;
+    height: 10vmax;
+    object-fit: cover;
+  }
+  
+  /* Game Card Heading */
+  .game-card h3 {
+    font-size: 1.5vmax;
+    margin: 0.5vmax 0vmax 0vmax 0vmax;
+    color: #f5f5f5;
+  }
+  
+  /* Game Description */
+  .game-card .desk {
+    font-size: 1vmax;
+    color: #bbb;
+    margin-bottom: 0vmax;
+  }
+  
+  /* Visits Text */
+  .game-card p {
+    font-size: 1.5vmax;
+    color: #f5f5f5;
+    margin-bottom: 0.5vmax;
+  }
+  
+.play-btn
+{
+  margin-top: 1vmax;
+}
+
+  /* Play Button Styles */
+  .game-card .play-btn {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 1vmax 2.2vmax;
+    border-radius: 1vmax;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 1.5vmax;
+  }
+  
+  .game-card .play-btn:hover {
+    background-color: #FF0000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8);
+  }
+  
+  /* Votes Section */
+  .votes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vmax;
+    margin-top: 1vmax;
+  }
+  
+  /* Thumbs Up & Down Buttons */
+  .thumbsup-btn, .thumbsdown-btn, .visits-btn {
+    border: none;
+    background: none;
+    font-size: 2vmax;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .thumbsup-btn i {
+    color: #00ff00; /* Green for thumbs up */
+  }
+  
+  .thumbsdown-btn i {
+    color: #ff0000; /* Red for thumbs down */
+  }
+  
+  .visits-btn i {
+    color: yellow; /* White for visits */
+  }
+  
+  .visits-count {
+    font-size: 1.5vmax;
+    color: yellow;
+  
+  }
+  
+  .thumbsup-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  .thumbsdown-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  .visits-btn:hover {
+    transform: scale(1.2);
+  
+  }
+  
+  
+  /* Game Screen */
+  #game-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmax;
+    padding: 2vmax;
+  }
+  
+  /* Game Frame */
+  #game-frame {
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 1vmax;
+  }
+  
+  /* Close Button */
+  #close-btn {
+    position: absolute;
+    top: 2vmax;
+    right: 2vmax;
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 1.5vmax;
+    border-radius: 50%;
+    font-size: 2vmax;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  #close-btn:hover {
+    background-color: #FF0000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8);
+  }
+  
+  /* Vote Buttons in Game Screen */
+  #vote-buttons {
+    display: flex;
+    gap: 1.5vmax;
+  }
+  
+  #vote-buttons button {
+    font-size: 2.5vmax;
+    padding: 1vmax 2vmax;
+    border-radius: 1vmax;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  #thumbsup-btn {
+    background: white;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+  }
+  
+  #thumbsup-btn:hover {
+    background: #00ff00;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  #thumbsdown-btn {
+    background: white;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+  }
+  
+  #thumbsdown-btn:hover {
+    background: #ff0000;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* Loading Spinner */
+  #loading-spinner {
+    font-size: 2vmax;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding: 2vmax;
+  }
+  
+  span.thumbsup-count {
+    color: green;
+    font-size: 1.5vmax;
+  }
+  span.thumbsdown-count {
+    color: red;
+    font-size: 1.5vmax;
+  }
+  
+  
+
+
+  .loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top: 6px solid #ff4f4f;
+    border-bottom: 6px solid #4fafff;
+    animation: spin 1.5s linear infinite;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 79, 79, 0.7);
+}
+
+.inner-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #ff4f4f;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.7; }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #game-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .game-card {
+      width: 90%; /* Make cards take most of the screen width */
+      height: auto; /* Adjust height automatically */
+      padding: 3vw;
+      margin: 2vw;
+  }
+
+  .game-card img {
+      height: 30vw; /* Adjust image height */
+  }
+
+  .game-card h3 {
+      font-size: 4vw; /* Responsive text size */
+  }
+
+  .game-card .desk,
+  .game-card p {
+      font-size: 3.5vw;
+  }
+
+  .game-card .play-btn {
+      font-size: 4vw;
+      padding: 2.5vw 5vw;
+  }
+
+  .votes {
+      gap: 3vw;
+  }
+
+  .thumbsup-btn, .thumbsdown-btn, .visits-btn {
+      font-size: 5vw;
+  }
+
+  .visits-count {
+      font-size: 3.5vw;
+  }
+
+  #game-frame {
+      width: 95%;
+      height: 75%;
+  }
+
+  #close-btn {
+      font-size: 5vw;
+      padding: 3vw;
+      top: 3vw;
+      right: 3vw;
+  }
+
+  
+  span.thumbsup-count {
+    color: green;
+    font-size: 2.5vmax;
+  }
+  span.thumbsdown-count {
+    color: red;
+    font-size: 2.5vmax;
+  }
+  
+  
+}
+
+@media (max-width: 480px) {
+  .game-card {
+      width: 95%;
+      padding: 4vw;
+  }
+
+  .game-card img {
+      height: 40vw;
+  }
+
+  .game-card h3 {
+      font-size: 5vw;
+  }
+
+  .game-card .desk,
+  .game-card p {
+      font-size: 4vw;
+  }
+
+  .game-card .play-btn {
+      font-size: 5vw;
+      padding: 3vw 6vw;
+  }
+
+  .votes {
+      gap: 4vw;
+  }
+
+  .thumbsup-btn, .thumbsdown-btn, .visits-btn {
+      font-size: 6vw;
+  }
+
+  .visits-count {
+      font-size: 4vw;
+  }
+
+  #game-frame {
+      width: 100%;
+      height: 70%;
+  }
+
+  #close-btn {
+      font-size: 6vw;
+      padding: 4vw;
+      top: 4vw;
+      right: 4vw;
+  }
+
+  
+}

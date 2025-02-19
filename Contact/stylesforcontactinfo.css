@@ -1,0 +1,43 @@
+
+h1 {
+    position: fixed;
+    color: white;
+    font-size: 3vmax;
+    margin-left: 17vmax;
+    margin-top: 4vmax;
+    font-size: 4vmax;
+    color: rgb(65, 0, 0);
+    text-shadow: 0 0 0.1vmax rgba(255, 0, 0, 0.5), 0 0 0.3vmax rgba(255, 0, 0, 0.4);
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+  }
+  
+  .contactinfodiv {
+    position: fixed;
+    display: flex;
+    top: 18vmax;
+    left: 10%;
+    background: rgba(31, 31, 31, 0.4);
+    padding: 3vmax;
+    border-radius: 0.8vmax;
+  }
+  .contact-info {
+    color: red;
+    font-size: 1.5vmax;
+  }
+  .contact-info h2 {
+    margin-bottom: 1.3vmax;
+    font-size: 2.5vmax;
+  }
+  .contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vmax;
+    color: white;
+  }
+  .contact-info .info-item i {
+    margin-right: 1vmax;
+    font-size: 1.5vmax;
+  }
+  .info-item i{
+    color: red;
+  }

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <title>QuantG – Play, Compete, Win</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesforwhoweare.css">
+    <link rel="stylesheet" href="stylesforgamearea.css">
+    <link rel="stylesheet" href="stylesforaboutgames.css">
+    <link rel="stylesheet" href="stylesforherosection.css">
+    <link rel="stylesheet" href="stylesfornavigationbar.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforlogo.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforcursor.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforfooter.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforsharebtn.css">
+    <link rel="stylesheet" href="../common_style_script/stylesforhamburger.css">
+
+</head>
+<body>
+    <div class="header-background"></div>
+    
+    <!--Header-->
+    <header>
+        <div class="navigation-bar">
+            <div class="navi-text">
+                <a href="#home" class="items-nav">Home</a>
+                <a href="../Explore/allgamepage/index.html" class="items-nav">Explore</a>
+                <a href="../login/login.html" class="items-nav">Signup/Login</a>
+                <a href="../About/index.html" class="items-nav">About</a>
+                <a href="../Contact/index.html" class="items-nav">Contact</a>
+                <span id="navigator"></span>
+            </div>
+        </div>
+    </header>
+
+    
+<!-- Hamburger Menu Icon -->
+<div class="hamburger-menu" onclick="toggleMenu()">
+  ☰
+</div>
+
+<!-- Sidebar Menu -->
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">✖</a>
+  <a href="../Home/index.html">Home</a>
+  <a href="../Explore/allgamepage/index.html">Explore</a>
+  <a href="../About/index.html">About</a>
+  <a href="../Contact/index.html">Contact</a>
+</div>
+
+  <!-- Share Button and Social Icons -->
+  <div class="unique-body">
+    <!-- Fixed Button to Trigger Icons -->
+    <div class="unique-button" id="unique-button">
+        <i class="fas fa-share-alt"></i> <!-- Share icon -->
+    </div>
+    
+    <!-- Social Icons (Initially Hidden) -->
+    <div class="unique-social-icons" id="unique-social-icons">
+        <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://discord.com" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <!--Logo-->
+  <div class="logo">
+    <div class="logo-container">
+      <div class="quantg">
+        <span class="q">Q</span>
+        <span class="u">u</span>
+        <span class="a">a</span>
+        <span class="n">n</span>
+        <span class="t">t</span>
+        <span class="g">G</span>
+      </div>
+      <div class="motto">BEYOND GAMING</div>
+    </div>
+  </div>
+
+  <!--Hero-->
+  <div class="hero">
+    <h1>Welcome to QuantG</h1>
+    <p>Your gateway to the ultimate gaming universe.</p>
+    <a class="cta-button" href="../Explore/allgamepage/index.html">Explore Now</a>
+  </div>
+
+  <section class="uuss">
+    <section class="sect">
+        <div class="content-wrapper">
+            
+            <!-- Left Content -->
+            <div class="left-content">
+                <div class="title-container">
+                    <div class="rotated-title">
+                        <h2>Who We Are</h2>
+                    </div>
+                    <div class="main-title">
+                        <h3>WE FOCUS ON CREATING A GAMING PLATFORM</h3>
+                        <p>We focus on building a cutting-edge gaming platform that brings players immersive experiences. Our goal is to combine stunning visuals, engaging gameplay, and innovative technology to create a seamless and enjoyable gaming environment. Whether you're a casual gamer or a competitive player, our platform is designed to deliver excitement, creativity, and endless adventures.</p>
+                    </div>
+                    <p>Learn more</p>
+                    <a href="../About/index.html">ABOUT US</a>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="right-content">
+                <img src="section.webp" alt="Gaming Platform Visual">
+            </div>
+
+        </div>
+    </section>
+</section>
+
+  <!--Sliding game images->
+  <center><h2>DISCOVER OUR GAMES</h2></center>
+  <div class="container">
+    <img src="https://i.pinimg.com/474x/d8/d2/13/d8d2136313150cd52ccdc46f160e34bc.jpg" alt="Image 1">
+    <img src="https://i.pinimg.com/236x/2a/8f/6d/2a8f6d12a3994fcb29b3e499d6733276.jpg" alt="Image 2">
+    <img src="https://i.pinimg.com/474x/e5/cb/3d/e5cb3da34c73aed23ff7b009370038fc.jpg" alt="Image 3">
+    <img src="https://i.pinimg.com/474x/09/f7/bc/09f7bc2e667bb53f2c0aace07d382fcb.jpg" alt="Image 4">
+    <img src="https://i.pinimg.com/736x/79/2c/09/792c09cfec0172fa5a5061edfd6cf3bc.jpg" alt="Image 5">
+  </div-->
+
+  <div class="about-games">
+    <h2>About Our Games</h2>
+    <ul>
+        <li>Our games are for fun and entertainment.</li>
+        <li>We provide engaging experiences for all players.</li>
+        <li>We keep adding new games to our collection regularly.</li>
+        <li>Our games cater to all skill levels and preferences.</li>
+        <li>We focus on creativity, excitement, and community.</li>
+    </ul>
+    <p>Stay tuned for more exciting updates!</p>
+</div>
+
+
+<!--div id="gameArea">
+  <div id="score">Score: 0</div>
+  <div class="ship"></div>
+</div-->
+
+  <!--Footer-->
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        <p>Join our community: USMIA</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="../Explore/allgamepage/index.html">Explore</a> | 
+            <a href="../About/index.html">About us</a> | 
+            <a href="../Contact/index.html">Contact us</a>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 QuantG. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<script type="module">
+  
+/*/ Check if the token exists in localStorage and validate it on page load
+document.addEventListener("DOMContentLoaded", function () {
+    const token = localStorage.getItem("authToken");
+
+    if (!token) {
+        alert("No token found. Please log in.");
+        window.location.href = "../login/login.html"; // Redirect to login page
+        return;
+    }
+
+    // Send the token to the backend for verification
+    fetch("http://localhost:3000/verify-token", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ token })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Authentication failed. Please log in again.");
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.message === "OK") {
+            console.log("Authentication successful.");
+            // Continue with the page loading or other actions if the token is valid
+        } else {
+            alert("Invalid or expired token. Please log in again.");
+            localStorage.removeItem("authToken"); // Remove the invalid token
+            window.location.href = "../login/login.html"; // Redirect to login page
+        }
+    })
+    .catch(error => {
+        console.error("Error verifying token:", error);
+        alert("Server error: Unauthorized access... Please try again later.");
+       window.location.href = "../login/login.html"; // Redirect to login page if verification fails
+    });
+});*/
+
+</script>
+
+<script src="scriptforgamesarea.js"></script>
+<script src="../common_style_script/scriptforfooter.js"></script>
+<script src="../common_style_script/scriptforhamburger.js"></script>
+<script src="../common_style_script/scriptformouseflare.js"></script>
+<script src="../common_style_script/scriptforsocialicons.js"></script>
+<script src="../common_style_script/scriptforavigationbar.js"></script>
+
+</body>
+</html>
