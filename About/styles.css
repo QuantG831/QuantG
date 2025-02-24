@@ -16,7 +16,6 @@ body {
     background-image: radial-gradient(circle farthest-corner at 100% 250%, #ff0000 0.01%, #000000 80%);
     background-size: cover;
     font-family: 'Rajdhani', cursive;
-    height: 310vmax;
 }
 
 .xbody  {
@@ -41,5 +40,7 @@ box-shadow: inset 0 -5px 10px rgba(255, 0, 0, 0.7), inset 0 5px 10px rgba(255, 0
     height: 9vmax;
   
   }
-  
+  body{
+    height: 395vmax;
+  }
   }
