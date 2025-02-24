@@ -37,5 +37,8 @@ box-shadow: inset 0 -5px 10px rgba(255, 0, 0, 0.7), inset 0 5px 10px rgba(255, 0
       height: 9vmax;
     
     }
+    body {
+        height: 350vmax;
+    }
     
     }
