@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Guessing Game</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e2e;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .game-container {
+            text-align: center;
+            background-color: #29293d;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff4757;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        input {
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid #ff4757;
+            border-radius: 5px;
+            background-color: #2f2f3e;
+            color: white;
+            outline: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #e84158;
+        }
+        .guess-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #1e1e2e;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .digit {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+            display: inline-block;
+            border-radius: 10px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        .correct {
+            background-color: #2ecc71;
+            color: white;
+        }
+        .exists {
+            background-color: #f1c40f;
+            color: black;
+        }
+        .wrong {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .attempts {
+            margin-top: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        #message {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Code Guessing Game</h1>
+        <p>Guess the 5-digit code (0-9) without repeating digits</p>
+        <input type="text" id="guess" maxlength="5" pattern="[0-9]{5}" required>
+        <button onclick="checkGuess()">Submit Guess</button>
+        <button onclick="restartGame()">Restart Game</button>
+        <p class="attempts">Attempts left: <span id="attempts">10</span></p>
+        <p id="message"></p>
+        <div class="guess-container" id="result"></div>
+    </div>
+
+    <script>
+        let secretCode, attemptsLeft;
+        function generateUniqueCode() {
+            let digits = new Set();
+            while (digits.size < 5) {
+                digits.add(Math.floor(Math.random() * 10).toString());
+            }
+            return Array.from(digits);
+        }
+        
+        function initializeGame() {
+            secretCode = generateUniqueCode();
+            console.log("Secret Code:", secretCode.join("")); // Debugging, remove in production
+            attemptsLeft = 10;
+            document.getElementById("attempts").textContent = attemptsLeft;
+            document.getElementById("message").textContent = "";
+            document.getElementById("guess").value = "";
+            document.getElementById("guess").disabled = false;
+            document.getElementById("result").innerHTML = "";
+        }
+        
+        function checkGuess() {
+            if (attemptsLeft <= 0) return;
+            const guess = document.getElementById("guess").value.split("");
+            if (guess.length !== 5 || guess.some(isNaN) || new Set(guess).size !== 5) {
+                return alert("Enter a valid 5-digit number with unique digits!");
+            }
+            
+            let resultDiv = document.getElementById("result");
+            let guessRow = document.createElement("div");
+            
+            let result = guess.map((num, i) => {
+                let span = document.createElement("span");
+                span.classList.add("digit");
+                span.textContent = num;
+                
+                if (num === secretCode[i]) {
+                    span.classList.add("correct");
+                } else if (secretCode.includes(num)) {
+                    span.classList.add("exists");
+                } else {
+                    span.classList.add("wrong");
+                }
+                return span;
+            });
+            
+            result.forEach(span => guessRow.appendChild(span));
+            resultDiv.appendChild(guessRow);
+            
+            attemptsLeft--;
+            document.getElementById("attempts").textContent = attemptsLeft;
+            
+            if (guess.join("") === secretCode.join("")) {
+                document.getElementById("message").textContent = "Congratulations! You guessed the correct code!";
+                document.getElementById("guess").disabled = true;
+            } else if (attemptsLeft === 0) {
+                document.getElementById("message").textContent = "Game Over! The correct code was " + secretCode.join("");
+                document.getElementById("guess").disabled = true;
+            }
+        }
+        
+        function restartGame() {
+            initializeGame();
+        }
+        
+        initializeGame();
+    </script>
+</body>
+</html>
