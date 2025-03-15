@@ -176,7 +176,7 @@ document.getElementById("login").addEventListener("click", function(event) {
             if (userData.email === email) {
                 userFound = true;
                 // Send a request to verify the login credentials on the server
-                fetch("http://localhost:3000/verify-login", {
+                fetch("https://quant-c6ypvvefy-usmia.vercel.app/api/index?action=verifyLogin", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
