@@ -172,7 +172,7 @@ document.getElementById("sendCode").addEventListener("click", async function (ev
 
     try {
         // Check if email exists
-        let response = await fetch("http://localhost:3000/check-email", {
+        let response = await fetch("https://quant-c6ypvvefy-usmia.vercel.app/api/index?action=checkEmail", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email })
@@ -187,7 +187,7 @@ document.getElementById("sendCode").addEventListener("click", async function (ev
         }
 
         // Send OTP
-        response = await fetch("http://localhost:3000/send-otp-signup", {
+        response = await fetch("https://quant-c6ypvvefy-usmia.vercel.app/api/index?action=sendOtpSignup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email })
@@ -222,7 +222,7 @@ document.getElementById("verifyCode").addEventListener("click", async function (
     }
 
     try {
-        let response = await fetch("http://localhost:3000/verify-otp", {
+        let response = await fetch("https://quant-c6ypvvefy-usmia.vercel.app/api/index?action=verifyOtp", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, otp })
@@ -264,7 +264,7 @@ document.getElementById("signup").addEventListener("click", async function (e) {
     }
 
     try {
-        let response = await fetch("http://localhost:3000/signup", {
+        let response = await fetch("https://quant-c6ypvvefy-usmia.vercel.app/api/index?action=signup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ firstName, lastName, email, password })
